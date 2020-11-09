@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Cifrado Cesar</title>
+</head>
+<body>
+    <div align="center">
+    <table border="1">
+        <tr>
+            <td width="200" align="center" colspan="2">
+            <p>
+                Este cifrado es un ejemplo del cifrado de Cesar
+                en el cual se usa un cambio de posicion dentro alfabeto
+                en los lugares que el usuario elija.
+            </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ingresa el mensaje que quieras cifrar o descifrar
+            </td>
+            <td>
+            <textarea id="cadena" onkeypress="return valideKey2(event);"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ingresa el numero de veces que quieres que se desplace el cifrado
+            </td>
+            <td>
+            <input type="text" id="desplazar" onkeypress="return valideKey(event);" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>
+                <input type="button" value="Cifrar" onclick="codificar()" >
+            </p>
+            </td>
+            <td bgColor="lightgreen" valign="top" width="80" height="19" rowspan="2">
+                <div id="resultado" ></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>
+                <input type="button" value="Descifrar" onclick="decodificar()" >          
+            </p>
+            </td>
+            
+        </tr>
+    </table>
+    </div>
+    
+    
+    <script src="js/logica.js" > </script>
+    <script src="js/validarNumeros.js"></script>
+    <script src="js/validarLetras.js"></script>
+            
+        
+</body>
+</html>
